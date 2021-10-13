@@ -2,7 +2,7 @@ import './styles/NavBar.css'
 
 function NavBar () {
     return (
-        <div className='nav'>
+        <nav className='nav'>
             <div className='container'>
                 <div className='nav__container'>
                     <div className='nav__title'>
@@ -18,7 +18,7 @@ function NavBar () {
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 
