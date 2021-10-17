@@ -1,6 +1,6 @@
 import './styles/NavBar.css'
 
-function NavBar () {
+function NavBar() {
     return (
         <nav className='nav'>
             <div className='container'>
