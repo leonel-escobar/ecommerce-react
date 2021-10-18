@@ -16,7 +16,7 @@
 
 .nav__title {
     color: #fff;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 
 .nav__menu ul {
@@ -31,4 +31,5 @@
 .nav__menu ul li {
     color: #fff;
     line-height: 2rem;
+    cursor: pointer;
 }

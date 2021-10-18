@@ -1,9 +1,11 @@
+import cart from '../images/cart.png'
+import './styles/CartWidget.css'
 
 function CartWidget() {
     return(
-        <div>
-            
-        </div>
+        <>
+            <img className="cart-icon" src={cart} alt="#" />
+        </>
     )
 }
 
