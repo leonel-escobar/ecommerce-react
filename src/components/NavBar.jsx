@@ -12,9 +12,15 @@ function NavBar() {
                     </div>
                     <div className='nav__menu'>
                         <ul>
-                            <li>Home</li>
-                            <li>Productos</li>
-                            <li>Contacto</li>
+                            <li>
+                                <a href="/#">Home</a>
+                            </li>
+                            <li>
+                                <a href="/#">Productos</a>
+                            </li>
+                            <li>
+                                <a href="/#">Contacto</a> 
+                            </li>
                             <li><CartWidget /></li>
                         </ul>
                     </div>  
