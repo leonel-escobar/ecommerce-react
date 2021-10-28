@@ -1,0 +1,41 @@
+.detailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 43.75rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 6px;
+}
+
+.detail__image {
+    width: 50%;
+}
+
+.detail__image img {
+    width: 100%;
+}
+
+.detail__info {
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.detail__info p {
+    font-size: 28px;
+
+}
+
+.detail__info span {
+    font-size: 24px;
+}
+
+.detail__info p {
+    font-size: 16px;
+}

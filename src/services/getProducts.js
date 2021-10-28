@@ -24,3 +24,11 @@ export const getProducts = new Promise((res, rej) => {
         res(products)
     },2000)
 })
+
+const detail = {id: 1, picture: remera_negra, title: "Remera Negra", price: 2100, description: "Remera negra lisa, manga corta, %100 algodón"}
+
+export const getItem = new Promise((res, rej) => {
+    setTimeout(() => {
+        res(detail)
+    },2000)
+})
