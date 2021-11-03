@@ -1,12 +1,6 @@
-.greeting {
-    display: block;
-    padding: 1rem;
-    border: none;
-    border-radius: 6px;
-}
 
-.greeting p {
-    font-weight: 500;
+.item-list-container {
+    padding: 8rem 0;
 }
 
 .products {
@@ -18,14 +12,17 @@
 
 .item {
     display: block;
-    width: 16rem;
+    width: 12.75rem;
     margin: 0.5rem;
-    border-radius: 6px;
+    border-radius: 8px;
+    background-color: #fff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .item img {
     width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .item__info {

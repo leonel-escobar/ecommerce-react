@@ -1,32 +1,39 @@
-import ItemCount from './ItemCount'
-import ItemList from './ItemList'
 import { useState, useEffect } from "react"
+import { useParams } from 'react-router-dom'
 import { getProducts } from "../services/getProducts"
+import ItemList from './ItemList'
 import './styles/ItemListContainer.css'
 
-function ItemListContainer({greeting}) {
-
-    const onAdd = (total) => {
-        return alert(total + " productos agregados")
-    }
+function ItemListContainer() {
 
     const [product, setProduct] = useState([])
+    const {category} = useParams()
 
     useEffect(() => {
     
-    getProducts
-    .then( res => {
-        console.log("Success",res)
-        setProduct(res)
-    })
-    .catch(err => console.log("Error",err))
-    
-    },[])
+        if (category) {
+            
+            getProducts
+            .then( res => {
+                console.log("Success",res)
+                setProduct(res.filter(el => el.category === category))
+            })
+            .catch(err => console.log("Error",err))
+
+        } else {
+        
+            getProducts
+            .then( res => {
+                console.log("Success",res)
+                setProduct(res)
+            })
+            .catch(err => console.log("Error",err))
+
+        } 
+    },[category])
 
     return (
-        <div className="greeting">
-            <p>{greeting}</p>
-            <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+        <div className="item-list-container">
             <ItemList items={product}/>
         </div>
     )  

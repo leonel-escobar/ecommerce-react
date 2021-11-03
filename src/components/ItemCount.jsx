@@ -24,7 +24,7 @@ function ItemCount({stock, initial, onAdd}) {
         <div className="counter">
             <div className="counter__control">
                 <div>
-                    <button className="button-primary" onClick={reduct}>
+                    <button className="button button--primary" onClick={reduct}>
                         -
                     </button>
                 </div>
@@ -32,13 +32,13 @@ function ItemCount({stock, initial, onAdd}) {
                     <p>{count}</p>
                 </div>
                 <div>
-                    <button className="button-primary" onClick={add}>
+                    <button className="button button--primary" onClick={add}>
                         +
                     </button>
                 </div>
             </div>
             <div className="counter__add">
-                <button className="button-primary" onClick={addToCart}>
+                <button className="button button--primary" onClick={addToCart}>
                     Agregar producto
                 </button>
             </div>

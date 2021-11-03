@@ -1,5 +1,11 @@
+import ItemCount from './ItemCount'
 
 function ItemDetail({item}) {
+
+    const onAdd = (total) => {
+        return alert(total + " productos agregados")
+    }
+
     return(
         <div className="detail">
             <div className="detail__image">
@@ -7,9 +13,10 @@ function ItemDetail({item}) {
             </div>
             <div className="detail__info">
                 <h3>{item.title}</h3>
-                <span>$ {item.price}</span>
+                <span>{`$ ${item.price}`}</span>
                 <p>{item.description}</p>
-            </div>
+                <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
+            </div> 
         </div>
     )
 }
