@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 import './styles/ItemCount.css'
 
 function ItemCount({stock, initial, onAdd}) {
@@ -17,7 +17,7 @@ function ItemCount({stock, initial, onAdd}) {
     }
 
     const addToCart = () => {
-        return onAdd(count)
+        onAdd(count)
     }
 
     return(

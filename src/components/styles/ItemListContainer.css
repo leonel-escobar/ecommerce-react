@@ -17,6 +17,12 @@
     border-radius: 8px;
     background-color: #fff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transform: scale(1) translateZ(0);
+    transition: transform 200ms linear;
+}
+
+.item:hover {
+    transform: scale(1.03) translateZ(0);
 }
 
 .item img {
