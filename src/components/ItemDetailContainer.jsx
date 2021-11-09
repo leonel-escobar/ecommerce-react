@@ -14,7 +14,7 @@ function ItemDetailContainer() {
         getDetails
         .then( res => {
             
-            setDetails(res.find(el => el.id === id))
+            setDetails(res.find(el => el.id === parseInt(id)))
             console.log("Success", console.log(res))
         })
         .catch( err => {

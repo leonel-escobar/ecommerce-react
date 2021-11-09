@@ -12,7 +12,7 @@ import buzo_st from '../images/buzo_st.jpg'
 
 const products = [
     {
-        id: "1", 
+        id: 1, 
         category: "remeras", 
         picture: remera_negra, 
         title: "Remera Negra", 
@@ -21,7 +21,7 @@ const products = [
         description: "Remera negra lisa, manga corta, %100 algodón",
     },
     {
-        id: "2", 
+        id: 2, 
         category: "remeras", 
         picture: remera_gris, 
         title: "Remera Gris", 
@@ -30,7 +30,7 @@ const products = [
         description: "Remera gris lisa, manga corta, %100 algodón",
     },
     {
-        id: "3", 
+        id: 3, 
         category: "remeras", 
         picture: remera_js, 
         title: "Remera JavaScript", 
@@ -39,7 +39,7 @@ const products = [
         description: "Remera negra estampada, manga corta, %100 algodón",
     },
     {
-        id: "4", 
+        id: 4, 
         category: "remeras", 
         picture: remera_react, 
         title: "Remera React JS", 
@@ -48,7 +48,7 @@ const products = [
         description: "Remera negra estampada, manga corta, %100 algodón",
     },
     {
-        id: "5", 
+        id: 5, 
         category: "remeras", 
         picture: remera_doom, 
         title: "Remera Doom", 
@@ -57,7 +57,7 @@ const products = [
         description: "Remera negra estampada, manga corta, %100 algodón",
     },
     {
-        id: "6", 
+        id: 6, 
         category: "remeras", 
         picture: remera_doometernal, 
         title: "Remera Doom Eternal", 
@@ -66,7 +66,7 @@ const products = [
         description: "Remera negra estampada, manga corta, %100 algodón",
     },
     {
-        id: "7", 
+        id: 7, 
         category: "buzos", 
         picture: buzo_negro, 
         title: "Buzo Negro", 
@@ -75,7 +75,7 @@ const products = [
         description: "Buzo canguro negro liso",
     },
     {
-        id: "8", 
+        id: 8, 
         category: "buzos", 
         picture: buzo_gris, 
         title: "Buzo Gris", 
@@ -84,7 +84,7 @@ const products = [
         description: "Buzo canguro gris liso",
     },
     {
-        id: "9", 
+        id: 9, 
         category: "buzos", 
         picture: buzo_pi, 
         title: "Buzo PI", 
@@ -93,7 +93,7 @@ const products = [
         description: "Buzo canguro estampado",
     },
     {
-        id: "10", 
+        id: 10, 
         category: "buzos", 
         picture: buzo_st, 
         title: "Buzo Star Trek", 

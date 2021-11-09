@@ -1,16 +1,23 @@
 import { useState } from 'react/cjs/react.development'
 import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
+import { useCartContext } from '../context/CartContext'
+
 
 function ItemDetail({item}) {
     const [changeBtn, setChangeButton] = useState(false)
+    const [count, setCount] = useState(1)
+    const {addToCart} = useCartContext()
+    
     
     const onAdd = (total) => {
-        alert(total + " productos agregados")
-        setChangeButton(true)
-        console.log(total)
-    }
-
+        setCount(total)
+        addToCart(item, total)
+        setChangeButton(true)   
+    } 
+    
+    console.log(count)
+    
     return(
         <div className="detail">
             <div className="detail__image">
