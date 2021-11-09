@@ -9,7 +9,16 @@ function CartContextProvider ({children}) {
 
     function addToCart(item, quantity) {
         
-        setCartList([...cartList, {item, quantity}])  
+        const prodInCart = cartList.find(i => i.item.id === item.id)
+        if (prodInCart) {
+
+            prodInCart.quantity += quantity
+            setCartList([...cartList])
+        } else {
+
+            setCartList([...cartList, {item, quantity}])
+        }
+        
     }
     console.log(cartList)
 
