@@ -1,4 +1,27 @@
-.cart-icon {
+.cart-widget {
+    display: flex;
+    position: relative;
+}
+
+.cart-widget__icon {
     width: 30px;
     height: 30px;
+}
+
+.cart-widget__count {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #0d99b9;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.hide-cart-widget {
+    display: none;
 }
