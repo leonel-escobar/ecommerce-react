@@ -7,7 +7,7 @@ function CartWidget() {
     const {cartWidgetQty} = useCartContext()
 
     return(
-        <div className={(cartWidgetQty() === 0) ? "hide-cart-widget" : "cart-widget"}>
+        <div className="cart-widget">
             <Link to="/Cart">
                 <img className="cart-widget__icon" src={cart} alt="#" />
                 <span className="cart-widget__count">{cartWidgetQty()}</span>

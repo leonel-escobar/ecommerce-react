@@ -45,3 +45,8 @@
 .detail__info p {
     font-size: 16px;
 }
+
+.buying-controller {
+    display: contents;
+    height: 6rem;
+}

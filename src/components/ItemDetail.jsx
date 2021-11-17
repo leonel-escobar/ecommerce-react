@@ -30,9 +30,14 @@ function ItemDetail({item}) {
                 {   
                     (changeBtn === false)
                     ? <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
-                    : <Link to={"/cart"}>
-                        <button className="button button--primary">Terminar compra</button>
-                    </Link>
+                    : <div className="buying-controller">
+                        <Link to={"/"}>
+                            <button className="button button--primary">Agregar mas</button>
+                        </Link>
+                        <Link to={"/cart"}>
+                            <button className="button button--primary">Terminar compra</button>
+                        </Link>
+                    </div>
                 }
             </div>
         </div>
