@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { getFirestore } from "../services/getFirestore"
-// import { getProducts } from "../services/getProducts"
 import ItemList from './ItemList'
 import './styles/ItemListContainer.css'
 import loading_icon from '../images/loading.gif'
@@ -37,31 +36,6 @@ function ItemListContainer() {
             }
     },[category])
     
-    /*
-    useEffect(() => {
-    
-        if (category) {
-            
-            getProducts
-            .then( res => {
-                console.log("Success",res)
-                setProduct(res.filter(el => el.category === category))
-            })
-            .catch(err => console.log("Error",err))
-
-        } else {
-        
-            getProducts
-            .then( res => {
-                console.log("Success",res)
-                setProduct(res)
-            })
-            .catch(err => console.log("Error",err))
-
-        } 
-    },[category])
-    */
-
     return (
         <div className="item-list-container">
             {(loading)

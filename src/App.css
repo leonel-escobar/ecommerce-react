@@ -9,6 +9,7 @@
 
 .button {
   display: inline-block;
+  max-width: 170px;
   margin-bottom: 6px;
   padding: 7px 12px;
   font-weight: 500;

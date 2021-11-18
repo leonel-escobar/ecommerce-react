@@ -20,7 +20,6 @@ function CartContextProvider ({children}) {
         }
         
     }
-    console.log(cartList)
 
     const totalPrice = () => {
         return cartList.reduce((acc, el) => acc + (el.item.price * el.quantity), 0)
