@@ -26,11 +26,11 @@ function NavBar() {
                                 <li>
                                     <Link to="/categories/buzos">Buzos</Link> 
                                 </li>
-                                <li>
-                                    <CartWidget />
-                                </li>
                             </ul>
-                        </div>  
+                        </div> 
+                        <div>
+                            <CartWidget />
+                        </div>
                     </div>
                 </div>
             </nav>

@@ -6,47 +6,9 @@
     border-radius: 8px; 
 }
 
-.detail {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 43.75rem;
-    height: 23rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 8px;
-}
-
-.detail__image {
-    width: 50%;
-}
-
-.detail__image img {
-    height: 100%;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.detail__info {
-    display: flex;
-    flex-flow: column;
-    padding: 30px 60px;
-}
-
-.detail__info p {
-    font-size: 28px;
-
-}
-
-.detail__info span {
-    font-size: 24px;
-}
-
-.detail__info p {
-    font-size: 16px;
-}
-
-.buying-controller {
-    display: contents;
-    height: 6rem;
+@media (max-width: 768px) {
+    .detail-container {
+        padding-top: 8rem;
+        height: 100%;
+    }
 }

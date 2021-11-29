@@ -9,18 +9,31 @@ header {
 .nav {
     height: 4rem;
     background-color: #111;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
 
 .nav__container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.nav__icon {
+    width: 50%;
 }
 
 .nav__icon img {
     height: 3.2rem;
     margin-top: 6px;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav__menu ul {
@@ -29,7 +42,7 @@ header {
     justify-content: space-between;
     text-decoration: none;
     list-style: none;
-    width: 18rem;
+    width: 16rem;
 }
 
 .nav__menu ul a {

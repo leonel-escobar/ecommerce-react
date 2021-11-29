@@ -1,8 +1,8 @@
 import { useState } from 'react/cjs/react.development'
 import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
 import { useCartContext } from '../context/CartContext'
-
+import ItemCount from './ItemCount'
+import './styles/ItemDetail.css'
 
 function ItemDetail({item}) {
     const [changeBtn, setChangeButton] = useState(false)

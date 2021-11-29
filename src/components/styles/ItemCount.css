@@ -1,7 +1,7 @@
 .counter {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 9rem;
 }
 
@@ -11,10 +11,26 @@
     justify-content: space-around;
     align-items: center;
     width: 8rem;
-    margin: 0 auto;
+    margin: 0 0 6px 0;
 }
 
 .counter__control p {
     background-color: #fff;
     border-radius: 3px;
+}
+
+.button-count {
+    border-radius: 50% !important;
+    border: none;
+    background-color: #f2f2f2;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+@media (max-width: 480px) {
+    .counter {
+        align-items: center;
+    }
 }

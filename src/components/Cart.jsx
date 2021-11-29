@@ -3,16 +3,15 @@ import {Link} from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { getFirestore } from '../services/getFirestore'
 import firebase from 'firebase'
+import Form from './Form'
 import 'firebase/firestore'
 import './styles/Cart.css'
 
+
 function Cart() {
     const [orderId, setOrderId] = useState("")
-    const [formData, setFormData] = useState({
-        name: "",
-        phone: "",
-        email: "",
-    })
+    const [modal, setModal] = useState(false)
+    const [formData, setFormData] = useState({name: "", phone: "", email: "",})
 
     const {cartList, totalPrice, removeItem, cleanCart} = useCartContext()
 
@@ -36,11 +35,9 @@ function Cart() {
         dbQuery.collection("orders").add(order)
         .then(res => setOrderId(res.id))
         .catch(err => console.log(err))
-        .finally(()=> setFormData({
-            name: "",
-            phone: "",
-            email: ""
-        }))
+        .finally(()=> setFormData({name: "", phone: "", email: ""}),
+        setModal(true)
+        )
 
         const updateItems = dbQuery.collection("items").where(
             firebase.firestore.FieldPath.documentId(), "in", cartList.map(el => el.item.id)
@@ -66,8 +63,26 @@ function Cart() {
         setFormData({...formData, [e.target.name]: e.target.value})
     }
 
+    const closeModal = () => {
+        setModal(false)
+        cleanCart()
+    }
+
     return(
         <div className="cart container">
+            {(modal === true) &&
+                <div className="modal">
+                    <div className="modal__order">
+                        {(orderId) !== ""
+                        ?<div>
+                            <h3>¡Gracias por su compra!</h3>
+                            <p>El id de su compra es: {orderId}</p>
+                            <button className="button button--primary" onClick={() => closeModal()}>Cerrar</button>
+                        </div>
+                        : <p className="loading-order">Procesando orden de compra...</p>}
+                    </div>
+                </div>}
+                        
             <div className="cart__products">
                 {(totalPrice() === 0) 
                 ? <div className="cart__empty-products">
@@ -76,7 +91,7 @@ function Cart() {
                         <button className="button button--primary">
                             Agregar productos
                         </button>
-                    </Link>   
+                    </Link>  
                 </div>
                 : cartList.map(el =>
                     <div key={el.item.id} className="cart__card-products">
@@ -91,24 +106,16 @@ function Cart() {
                 )}
             </div>
 
-            {(totalPrice() !== 0)
-            ?<div className="cart__purchase">
-                 <div className="cart__price-purchase">
-                    <span>Precio Total: ${totalPrice()}</span>
+            {(totalPrice() !== 0) &&
+            <div className="cart__purchase">
+                <div className="cart__price-purchase">
+                    <span>Precio total: $ {totalPrice()}</span>
                     <button className="button button--primary" onClick={() => cleanCart()}>Vaciar carrito</button>
-                    <div>
-                        <form onSubmit={createOrder} onChange={userData}>
-                            <input type="text" name="name" placeholder="Nombre" defaultValue={formData.name}/>
-                            <input type="text" name="phone" placeholder="Teléfono" defaultValue={formData.phone}/>
-                            <input type="email" name="email" placeholder="e-mail" defaultValue={formData.email}/>
-                            <button className="button button--primary">
-                                Comprar
-                            </button>
-                        </form>
-                        {(orderId) !== "" && <p>El id de su compra es: {orderId}</p>}
-                    </div>
                 </div>
-            </div> : null} 
+                <div>
+                    <Form createOrder={createOrder} userData={userData} formData={formData}/>
+                </div>
+            </div>} 
         </div>
         )
 }

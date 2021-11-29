@@ -14,26 +14,16 @@ function ItemListContainer() {
     useEffect(() => {
 
         const db = getFirestore()
-        
-        if (category) {
-            
-            const dbQuery = db.collection("items").where("category", "==", category).get()
+
+            const dbQuery = (category) 
+            ? db.collection("items").where("category", "==", category).get()
+            : db.collection("items").get()
             dbQuery
             .then(res => {
                 setProduct(res.docs.map( prod => ({id: prod.id, ...prod.data()})))
             })
             .catch(err => console.log("Error", err))
             .finally(() => setLoading(false))
-        } else {
-            
-            const dbQuery = db.collection("items").get()
-            dbQuery
-            .then(res => {
-                setProduct(res.docs.map( prod => ({id: prod.id, ...prod.data()})))
-            })
-            .catch(err => console.log("Error", err))
-            .finally(() => setLoading(false))
-            }
     },[category])
     
     return (

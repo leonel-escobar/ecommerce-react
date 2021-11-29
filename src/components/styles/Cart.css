@@ -2,13 +2,15 @@
 .cart {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 8rem 0;
 }
 
 .cart__card-products{
     width: 500px;
+    margin-bottom: 12px;
+    border-radius: 8px;
 }
 
 .cart__empty-products {
@@ -29,6 +31,8 @@
 
 .cart__card-products > img {
     width: 12rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .cart__card-products > div {
@@ -40,34 +44,85 @@
 }
 
 .cart__card-products > div > h3 {
+    font-size: 15px;
+    font-weight: 500;
     margin: 0;
 }
 
+.cart__card-products > div > span {
+    font-size: 16px;
+}
+
 .cart__purchase {
-    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 10%;
+    width: 50%;
 }
 
 .cart__price-purchase {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 300px;
-    margin: 2rem;
     font-size: 1.2rem;
+    margin-bottom: 48px;
 }
 
-.cart__price-purchase form {
+.cart__price-purchase span {
+    margin-bottom: 12px;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.modal__order {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+    height: 180px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, 
+                rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 
+                rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
-.cart__price-purchase form input {
-    border: none;
-    border-bottom: 1px solid #262626;
-    background-color: transparent;
-    margin-bottom: 9px;
-    width: 300px;
-    height: 2rem;
+.loading-order {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .cart {
+        flex-direction: column;
+    }
+
+    .cart__card-products {
+        width: 100%;
+    }
+
+    .order-modal__id {
+        width: 98%;
+    }
+
+    .cart__products {
+        width: 95%;
+    }
+
+    .cart__purchase {
+        width: 95%;
+        margin-top: 24px;
+        padding: 0;
+    }
 }

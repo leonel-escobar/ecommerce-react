@@ -15,7 +15,7 @@ Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
 ### `Librerías`
 
-Este proyecto incorpora react-router-dom una libreria que proporciona componentes de navegación, los cuales facilitan el proceso de enrutamiento dinámico a través de las distintas secciones y/o categorias del mismo.
+Este proyecto incorpora react-router-dom 5.3.0 una libreria que proporciona componentes de navegación, los cuales facilitan el proceso de enrutamiento dinámico a través de las distintas secciones y/o categorias del mismo.
 
 **Antes de instalar la librería debe tener instalado npm o yarn.**
 
@@ -25,6 +25,8 @@ Para instalar la librería ejecutar el siguiente comando ubicados en la raiz del
 
 ```yarn add react-router-dom```
 
+Firestore, servicio de almacenamiento de datos de Firebase 8.9.1
+
 ### `Demo`
 
-```Demostración del proyecto en desarrollo https://awesome-wright-787a4c.netlify.app/```
+Demostración del proyecto en desarrollo [https://awesome-wright-787a4c.netlify.app/](https://awesome-wright-787a4c.netlify.app/)
