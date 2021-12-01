@@ -19,7 +19,7 @@ Este proyecto incorpora react-router-dom 5.3.0 una libreria que proporciona comp
 
 **Antes de instalar la librería debe tener instalado npm o yarn.**
 
-Para instalar la librería ejecutar el siguiente comando ubicados en la raiz del proyecto.
+Para instalar la librería ejecutar el siguiente comando ubicado en la raiz del proyecto.
 
 ```npm install react-router-dom```
 
@@ -29,4 +29,4 @@ Firestore, servicio de almacenamiento de datos de Firebase 8.9.1
 
 ### `Demo`
 
-Demostración del proyecto en desarrollo [https://awesome-wright-787a4c.netlify.app/](https://awesome-wright-787a4c.netlify.app/)
+Demostración del proyecto [https://dreamy-bhabha-e2af26.netlify.app/](https://dreamy-bhabha-e2af26.netlify.app/)
