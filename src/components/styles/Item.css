@@ -13,6 +13,11 @@
     transform: scale(1.03) translateZ(0);
 }
 
+.item a {
+    text-decoration: none;
+    color: #111;
+}
+
 .item img {
     width: 100%;
     border-top-left-radius: 8px;

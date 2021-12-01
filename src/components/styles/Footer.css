@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1c2938;
+    color: #e6e6e6;
+    height: 300px;
+}
+
+.footer__title {
+    text-align: center;
+    position: relative;
+}
+
+.footer__title h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer__title img {
+    position: absolute;
+    top: 18px;
+    left: 200px;
+    width: 24px;
+}
+
+.footer__social ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style-type: none;
+    position: relative;
+    width: 300px;
+    padding: 0;
+}
+
+.footer__social img {
+    width: 27px;
+    height: 27px;
+}

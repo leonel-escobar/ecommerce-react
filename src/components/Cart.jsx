@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { getFirestore } from '../services/getFirestore'
 import firebase from 'firebase'
 import Form from './Form'
 import 'firebase/firestore'
 import './styles/Cart.css'
+import EmptyCart from '../images/empty-cart.png'
 
 
 function Cart() {
@@ -54,8 +55,7 @@ function Cart() {
             })
 
         batch.commit()
-        .then(res => console.log("Stock actualizado", res))
-        .catch(err => console.log("Error de actualización de stock", err))
+        .catch(err => console.log("Error", err))
         })
     }
 
@@ -86,7 +86,8 @@ function Cart() {
             <div className="cart__products">
                 {(totalPrice() === 0) 
                 ? <div className="cart__empty-products">
-                    <p>El carrito está vacio</p>
+                    <p>El carrito está vacío</p>
+                    <img src={EmptyCart} alt="Empty cart" />
                     <Link to="/">
                         <button className="button button--primary">
                             Agregar productos
@@ -112,9 +113,7 @@ function Cart() {
                     <span>Precio total: $ {totalPrice()}</span>
                     <button className="button button--primary" onClick={() => cleanCart()}>Vaciar carrito</button>
                 </div>
-                <div>
-                    <Form createOrder={createOrder} userData={userData} formData={formData}/>
-                </div>
+                <Form createOrder={createOrder} userData={userData} formData={formData}/> 
             </div>} 
         </div>
         )

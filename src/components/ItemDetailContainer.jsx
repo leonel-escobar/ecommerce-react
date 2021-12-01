@@ -20,7 +20,6 @@ function ItemDetailContainer() {
         .then(res => {
 
             setDetails({id: res.id, ...res.data()})
-            console.log("Success", res)
         })
         .catch(err => {
 

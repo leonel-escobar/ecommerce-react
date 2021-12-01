@@ -4,9 +4,8 @@ import NavBar from './components/NavBar';
 import Cart from './components/Cart'
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Footer from './components/Footer';
 import './App.css';
-
-
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
           </Switch>
         </Router>
         </CartContextProvider>
+        <Footer />
     </div>
   );
 }

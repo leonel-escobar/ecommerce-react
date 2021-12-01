@@ -6,17 +6,13 @@ import './styles/ItemDetail.css'
 
 function ItemDetail({item}) {
     const [changeBtn, setChangeButton] = useState(false)
-    const [count, setCount] = useState(1)
     const {addToCart} = useCartContext()
     
     
     const onAdd = (total) => {
-        setCount(total)
         addToCart(item, total)
         setChangeButton(true)   
     } 
-    
-    console.log(count)
     
     return(
         <div className="detail">

@@ -9,7 +9,7 @@ function CartWidget() {
     return(
         <div className="cart-widget">
             <Link to="/Cart">
-                <img className="cart-widget__icon" src={cart} alt="#" />
+                <img className="cart-widget__icon" src={cart} alt="Cart icon" />
                 <span className="cart-widget__count">{cartWidgetQty()}</span>
             </Link>
         </div>
